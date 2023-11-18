@@ -1,0 +1,419 @@
+{% extends 'base.html' %} {% load static %} {% block content %}
+<style>
+  html,
+  body {
+    margin: 0;
+    padding: 0;
+  }
+
+  @keyframes display {
+    0% {
+      transform: translateX(200px);
+      opacity: 0;
+    }
+    10% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+    20% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+    30% {
+      transform: translateX(-200px);
+      opacity: 0;
+    }
+    100% {
+      transform: translateX(-200px);
+      opacity: 0;
+    }
+  }
+
+  .shop {
+    position: relative;
+    width: 100%;
+    height: 500px;
+    margin-bottom: 50px;
+  }
+
+  .shop img {
+    position: absolute;
+    height: 100%;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    animation: display 25s infinite;
+  }
+
+  img:nth-child(2) {
+    animation-delay: 5s;
+  }
+
+  img:nth-child(3) {
+    animation-delay: 10s;
+  }
+
+  img:nth-child(4) {
+    animation-delay: 15s;
+  }
+
+  img:nth-child(5) {
+    animation-delay: 20s;
+  }
+
+  .custom-row {
+    margin-bottom: 50px;
+  }
+
+  .shop-banner {
+    position: relative;
+    display: inline-block;
+    margin-bottom: 100px;
+    width: 100%;
+    height: 300px;
+  }
+
+  .shop-banner img {
+    height: 100%;
+    object-fit: cover;
+    width: 100%;
+  }
+
+  .shop .note {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    transform: translate(-50%, -50%);
+    color: #a3c1ad;
+    padding: 10px;
+    font-size: 18px;
+    font-family: "Times New Roman", Times, serif;
+  }
+
+  button {
+    border: none;
+    margin-bottom: 20px;
+  }
+</style>
+
+<!--  -->
+<div class="shop">
+  <img
+    class="d-block w-100"
+    src="{% static 'images/shop.jpg' %}"
+    alt="First slide"
+    style="
+      height: 500px;
+      object-fit: cover;
+      background-position: cover;
+      background-size: cover;
+    "
+  />
+  <img
+    class="d-block w-100"
+    src="{% static 'images/shop2.jpg' %}"
+    alt="First slide"
+    style="
+      height: 500px;
+      object-fit: cover;
+      background-position: cover;
+      background-size: cover;
+    "
+  />
+  <img
+    class="d-block w-100"
+    src="{% static 'images/shop3.jpg' %}"
+    alt="First slide"
+    style="
+      height: 500px;
+      object-fit: cover;
+      background-position: cover;
+      background-size: cover;
+    "
+  />
+  <img
+    class="d-block w-100"
+    src="{% static 'images/shop4.jpg' %}"
+    alt="First slide"
+    style="
+      height: 500px;
+      object-fit: cover;
+      background-position: cover;
+      background-size: cover;
+    "
+  />
+  <img
+    class="d-block w-100"
+    src="{% static 'images/shop5.jpg' %}"
+    alt="First slide"
+    style="
+      height: 500px;
+      object-fit: cover;
+      background-position: cover;
+      background-size: cover;
+    "
+  />
+  <div class="note">
+    <h1>
+      Hassle-free shopping from home, with a vast selection of high-quality
+      products just a click away
+    </h1>
+  </div>
+</div>
+<section class="container-fluid text-center">
+  {% comment %} about section {% endcomment %}
+  <div class="container">
+    <div class="row align-items-center custom-row">
+      <div
+        class="col-lg-6 col-md-6 order-2 order-md-1 mt-4 pt-2 mt-sm-0 opt-sm-0"
+      >
+        <div class="row align-items-center">
+          <div class="col-lg-6 col-md-6 col-6">
+            <div class="row">
+              <div class="col-lg-12 col-md-12 mt-4 pt-2">
+                <div
+                  class="card work-desk rounded border-0 shadow-lg overflow-hidden"
+                >
+                  <img
+                    src="{% static 'images/shop2.jpg' %}"
+                    class="img-fluid"
+                    alt="Image"
+                  />
+                  <div class="img-overlay bg-dark"></div>
+                </div>
+              </div>
+              <!--end col-->
+
+              <div class="col-12">
+                <div class="mt-4 pt-2 text-right">
+                  <a class="btn btn-info" href="{%url 'about_us' %}"
+                    >Read More<i class="mdi mdi-chevron-right"></i
+                  ></a>
+                </div>
+              </div>
+            </div>
+            <!--end row-->
+          </div>
+          <!--end col-->
+
+          <div class="col-lg-6 col-md-6 col-6">
+            <div class="row">
+              <div class="col-lg-12 col-md-12">
+                <div
+                  class="card work-desk rounded border-0 shadow-lg overflow-hidden"
+                >
+                  <img
+                    src="{% static 'images/shop5.jpg' %}"
+                    class="img-fluid"
+                    alt="Image"
+                  />
+                  <div class="img-overlay bg-dark"></div>
+                </div>
+              </div>
+              <!--end col-->
+
+              <div class="col-lg-12 col-md-12 mt-4 pt-2">
+                <div
+                  class="card work-desk rounded border-0 shadow-lg overflow-hidden"
+                >
+                  <img
+                    src="{% static 'images/shop3.jpg' %}"
+                    class="img-fluid"
+                    alt="Image"
+                  />
+                  <div class="img-overlay bg-dark"></div>
+                </div>
+              </div>
+              <!--end col-->
+            </div>
+            <!--end row-->
+          </div>
+          <!--end col-->
+        </div>
+        <!--end row-->
+      </div>
+
+      <div class="col-lg-6 col-md-6 col-12 order-1 order-md-2">
+        <div class="section-title ml-lg-5">
+          <h5 class="text-custom font-weight-normal mb-3">About Us</h5>
+          <h4 class="title mb-4">
+            Our mission is to <br />
+            make your life easier.
+          </h4>
+          <p class="text-muted mb-0">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit quod
+            debitis praesentium pariatur temporibus ipsa, cum quidem obcaecati
+            sunt?
+          </p>
+
+          <div class="row">
+            <div class="col-lg-6 mt-4 pt-2">
+              <div class="media align-items-center rounded shadow p-3">
+                <i class="fa fa-play h4 mb-0 text-custom"></i>
+                <h6 class="ml-3 mb-0">
+                  <a href="javascript:void(0)" class="text-dark">Responsive</a>
+                </h6>
+              </div>
+            </div>
+            <div class="col-lg-6 mt-4 pt-2">
+              <div class="media align-items-center rounded shadow p-3">
+                <i class="fa fa-file-download h4 mb-0 text-custom"></i>
+                <h6 class="ml-3 mb-0">
+                  <a href="javascript:void(0)" class="text-dark"
+                    >Free Download</a
+                  >
+                </h6>
+              </div>
+            </div>
+            <div class="col-lg-6 mt-4 pt-2">
+              <div class="media align-items-center rounded shadow p-3">
+                <i class="fa fa-user h4 mb-0 text-custom"></i>
+                <h6 class="ml-3 mb-0">
+                  <a href="javascript:void(0)" class="text-dark">Support</a>
+                </h6>
+              </div>
+            </div>
+            <div class="col-lg-6 mt-4 pt-2">
+              <div class="media align-items-center rounded shadow p-3">
+                <i class="fa fa-image h4 mb-0 text-custom"></i>
+                <h6 class="ml-3 mb-0">
+                  <a href="javascript:void(0)" class="text-dark">Development</a>
+                </h6>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--end col-->
+    </div>
+  </div>
+  {% comment %} end of about section {% endcomment %}
+
+  <div class="container">
+    <div class="row">
+      <h2>shoes</h2>
+      {% for shoe in shoes %}
+      <div class="col-md-3">
+        <div class="card">
+          <a href="{% url 'product'  shoe.id %} ">
+            <img
+              width="100px "
+              height="100px "
+              class="card-img-top"
+              src="{{ shoe.images.url}} "
+              alt="Notes image "
+            />
+          </a>
+          <p class="text-center">price: {{shoe.unit_price}}</p>
+
+          <h5>
+            <p class="text-center">brand: {{shoe.brand}}</p>
+          </h5>
+          <div class="card-body">
+            <button
+              data-product="{{shoe.id}} "
+              data-action="add "
+              type="button "
+              class="btn btn-outline-primary update-cart"
+            >
+              Add To Cart
+            </button>
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+    <br /><br /><br />
+    <button><a href="{% url 'all' 'shoes' %} ">see more </a></button>
+  </div>
+  <div class="shop-banner">
+    <img src="{% static 'images/banner2.jpg.' %}" alt="Banner Image" />
+    <div class="note">
+      <!-- <h1>
+        In publishing and graphic design, Lorem ipsum is a placeholder text
+        commonly u
+      </h1> -->
+    </div>
+  </div>
+  <div class="container">
+    <div class="row">
+      <h2>shirts</h2>
+      {% for shirt in shirts %}
+      <div class="col-md-3">
+        <div class="card">
+          <a href="{% url 'product'  shirt.id %} ">
+            <img
+              class="card-img-top"
+              src="{{ shirt.images.url }}"
+              alt="Notes image "
+            />
+          </a>
+          <p class="text-center">price: {{shirt.unit_price}}</p>
+          <h5>
+            <p class="text-center">brand: {{shirt.brand}}</p>
+          </h5>
+          <div class="card-body">
+            <button
+              data-product="{{shirt.id}} "
+              data-action="add "
+              type="button "
+              class="btn btn-outline-primary update-cart"
+            >
+              Add To Cart
+            </button>
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+    <br /><br /><br />
+    <button><a href="{% url 'all' 'shirt' %} ">see more</a></button>
+  </div>
+
+  <div class="shop-banner">
+    <img src="{% static 'images/banner3.jpg.' %}" alt="Banner Image" />
+    <div class="note"></div>
+  </div>
+  <div class="container">
+    <h2>Pants</h2>
+    <div class="row">
+      {% for pant in pants %}
+      <div class="col-md-3">
+        <div class="card">
+          <a href="{% url 'product'  pant.id %} "
+            ><img
+              class="card-img-top"
+              src="{{ pant.images.url }} "
+              alt="Notes image "
+          /></a>
+
+          <p class="text-center">price: {{pant.unit_price}}</p>
+          <h5>
+            <p class="text-center">brand: {{pant.brand}}</p>
+          </h5>
+          <div class="card-body">
+            <button
+              data-product="{{pant.id}} "
+              data-action="add "
+              type="button "
+              class="btn btn-outline-primary update-cart"
+            >
+              Add To Cart
+            </button>
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+    <br /><br /><br />
+    <button><a href="{% url 'all' 'pants' %} ">see more </a></button>
+  </div>
+</section>
+
+{% endblock content %}

@@ -1,0 +1,37 @@
+{% extends 'base.html' %} {% load static %} {% block content %}
+
+<section class="container text-center">
+  <p id="cart-total">{{cartitems}}</p>
+  <h3></h3>
+  <hr />
+  <br />
+  <div class="row">
+    {% for all in all %}
+    <div class="col-md-3">
+      <div class="card">
+        <img class="card-img-top" src="{{ all.images.url}}" alt="Notes image" />
+        <h5>
+          <p class="text-center" style="color: blue">
+            price: {{all.unit_price}}
+          </p>
+        </h5>
+        <h5>
+          <p class="text-center" style="color: blue">brand: {{all.brand}}</p>
+        </h5>
+        <div class="card-body">
+          <button
+            data-product="{{all.id}}"
+            data-action="add"
+            type="button"
+            class="btn btn-outline-primary update-cart"
+          >
+            Add To Cart
+          </button>
+        </div>
+      </div>
+    </div>
+
+    {% endfor %}
+  </div>
+</section>
+{% endblock content %}

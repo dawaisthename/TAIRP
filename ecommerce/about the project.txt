@@ -1,0 +1,13 @@
+these project is built on these assumbtions
+1. admin user can register products,customers
+2. only registered user can have access to add to cart, see and update profile.
+3. un registered user can only see the home and about pages
+4. and i only considered for three catagories shoes,shirts and pants.
+
+
+
+IT WILL CREATE PROFILE AND CUSTOMER INSTANCE MODEL BY THE TIME THE USER IS REGISTERED
+you can try by
+*registered user(customer)
+	username: dawa
+	password:dawa2323
